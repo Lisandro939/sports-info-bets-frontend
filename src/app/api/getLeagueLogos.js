@@ -1,8 +1,9 @@
 export async function getLeagueLogos () {
+    
     const resLigaProfesionalArgentina = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/ligaprofesionalargentina').then((res) => res.json())
     const resPremierLeague = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/premierleague').then((res) => res.json())
     const resLaLiga = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/laliga').then((res) => res.json())
-    const resBrasileiraoSerieA = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/brasileiraoseriea').then((res) => res.json())
+    const resBrasileiraoSerieA = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/brasileiraoseriea', {headers: {'Cache-Control': 'no-cache'}}).then((res) => res.json())
     const resBundesliga = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/bundesliga').then((res) => res.json())
     const resLigue1 = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/ligue1').then((res) => res.json())
     const resSerieA = await fetch('https://sport-bets-backend.lisandroagustin321.workers.dev/logos/seriea').then((res) => res.json())

@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['image-service.onefootball.com', 'sport-bets-backend.lisandroagustin321.workers.dev']
+    domains: ['image-service.onefootball.com', 'sport-bets-backend.lisandroagustin321.workers.dev', 'oneftbl-cms.imgix.net']
   }
 }
 

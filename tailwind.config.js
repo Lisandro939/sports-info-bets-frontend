@@ -14,7 +14,10 @@ module.exports = {
         'primary': '#141414',
         'secondary': '#303337',
         'terciary': '#95979C',
-        'primaryOrange': '#E34F0D'
+        'primaryOrange': '#E34F0D',
+        'primaryOrange': '#FF771E',
+        'lightOrange': '#FF9248',
+        'darkOrange': '#B34017'
       }
     },
   },

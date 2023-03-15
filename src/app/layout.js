@@ -7,7 +7,7 @@ export default async function RootLayout({ children }) {
   const logos = await getLeagueLogos()
 
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <Navbar logos={logos}/>
         {children}
