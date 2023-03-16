@@ -20,8 +20,8 @@ export default function BookMark() {
 
   return (
     <button onClick={() => uncheckedOrCheked()}>
-        <BsBookmark className={'text-white ' + bookmarkUnchecked}/>
-        <BsFillBookmarkStarFill className={'text-primaryOrange ' + bookmarkChecked}/>
+        <BsBookmark className={'text-white w-6 h-6 ' + bookmarkUnchecked}/>
+        <BsFillBookmarkStarFill className={'text-primaryOrange w-6 h-6 ' + bookmarkChecked}/>
     </button>
   )
 }

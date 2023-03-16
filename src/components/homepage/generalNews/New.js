@@ -6,9 +6,9 @@ import BookMark from './BookMark'
 export default function New({news}) {
 
     return (
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 w-[335px]'>
             {news.map((newsItem) => (
-                <div key={newsItem.Title} className='flex flex-col gap-4'>
+                <div key={newsItem.Title} className='flex flex-col gap-4 border-b-2 border-secondary pb-4'>
                     <Link href={newsItem.NewsLink}>
                         <Image alt='' src={newsItem.Image} width={335} height={188} className='rounded-lg'/>
                     </Link>
