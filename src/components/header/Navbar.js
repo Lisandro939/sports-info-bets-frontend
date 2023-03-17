@@ -43,13 +43,27 @@ export default function Navbar({logos}) {
       </button>
       <div className={'absolute sm:hidden top-14 left-0 w-screen h-fit flex flex-col gap-4 bg-primary border-t-2 border-secondary px-4 py-6 ' + sideBar}>
         <p className='text-white mb-4'>Competiciones populares</p>
-        <LeagueLink logo={ligaProfesionalArgentina} leagueName='Liga Profesional Argentina'/>
-        <LeagueLink logo={premierLeague} leagueName='Premier League'/>
-        <LeagueLink logo={laLiga} leagueName='La Liga'/>
-        <LeagueLink logo={brasileiraoSerieA} leagueName='Brasileirao Serie A'/>
-        <LeagueLink logo={bundesliga} leagueName='Bundesliga'/>
-        <LeagueLink logo={ligue1} leagueName='Ligue 1'/>
-        <LeagueLink logo={serieA} leagueName='Serie A'/>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={ligaProfesionalArgentina} leagueName='Liga Profesional Argentina'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={premierLeague} leagueName='Premier League'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={laLiga} leagueName='La Liga'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={brasileiraoSerieA} leagueName='Brasileirao Serie A'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={bundesliga} leagueName='Bundesliga'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={ligue1} leagueName='Ligue 1'/>
+        </button>
+        <button onClick={() => changeVisibility()}>
+          <LeagueLink logo={serieA} leagueName='Serie A'/>
+        </button>
       </div>
     </span>
   )
