@@ -1,6 +1,7 @@
 import Navbar from '@/components/header/NavbarLisandro'
 import './globals.css'
 import { getLeagueLogos } from "./api/getLeagueLogos"
+import Footer from '@/components/footer/FooterLisandro'
 
 export default async function RootLayout({ children }) {
 
@@ -12,6 +13,7 @@ export default async function RootLayout({ children }) {
         <Navbar logos={logos}/>
         {children}
       </body>
+      <Footer />
     </html>
   )
 }
