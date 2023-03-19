@@ -1,7 +1,10 @@
-import Table from '@/components/eachPage/TableLisandro';
+import Content from '@/components/eachPage/ContentLisandro';
 import Image from 'next/image';
 import React from 'react'
+import { getLeagueNews } from '../api/getLeagueNews';
+import { getLeagueResults } from '../api/getLeagueResults';
 import { getLeagueTable } from '../api/getLeagueTable';
+import { getLeagueTransfers } from '../api/getLeagueTransfers';
 import { getOnlyLeagueLogo } from '../api/getOnlyLeagueLogo';
 
 export default async function page({params}) {
@@ -13,23 +16,25 @@ export default async function page({params}) {
     leagueName = leagueName.replace(/[A-Z]/g, (letra) => letra.toLowerCase());
 
     const table = await getLeagueTable(leagueName)
+    const news = await getLeagueNews(leagueName)
+    const results = await getLeagueResults(leagueName)
+    const transfers = await getLeagueTransfers(leagueName)
 
     const logo = await getOnlyLeagueLogo(leagueName)
 
     const leagueNameMod = league.replace(/([a-z])([A-Z])/g, "$1 $2").toUpperCase();
 
   return (
-    <div className='w-screen h-full bg-primary flex flex-col py-6 px-2'>
-      <span className='flex flex-col gap-4 items-'>
-        <div className='flex flex-row items-center gap-2'>
+    <div className='w-screen h-full bg-primary flex flex-col py-6'>
+      <span className='flex flex-col gap-4'>
+        <div className='flex flex-row items-center gap-2 ml-4'>
           <Image alt='' src={logo} width={50} height={50} className='border border-secondary rounded-full p-1'/>
           <div className='flex flex-col items-start justifu-around'>
-            <h2 className='text-xs text-white'>COMPETICION</h2>
+            <h2 className='text-[10px] text-white'>COMPETICIÓN</h2>
             <h1 className='text-white text-sm font-bold'>{leagueNameMod}</h1>
           </div>
         </div>
-        <h1 className='px-2 text-white text-sm'>Posiciones</h1>
-        <Table table={table}/>
+        <Content table={table} news={news} results={results} transfers={transfers}/>
       </span>
     </div>
   )

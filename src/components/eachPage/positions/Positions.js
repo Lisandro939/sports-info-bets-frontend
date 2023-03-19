@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function Table({table}) {
+export default function Positions({table}) {
 
     const classTH = 'px-2 text-xs'
     const classTD = 'px-2 py-4 text-center'
@@ -25,7 +25,7 @@ export default function Table({table}) {
         </thead>
         <tbody>
           {table.map((team, index) => (
-            <tr key={team.name} className='border-b border-terciary'>
+            <tr key={team.name} className='border-b border-secondary'>
               <td className={classTD}>{index + 1}</td>
               <td className='flex flex-row items-center justify-start gap-2 py-4'>
                 <Image alt='' src={team.logo} width={31} height={31} className='border border-secondary rounded-full p-1'/>

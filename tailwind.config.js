@@ -15,7 +15,7 @@ module.exports = {
         'secondary': '#303337',
         'terciary': '#95979C',
         'primaryOrange': '#E34F0D',
-        'primaryOrange': '#FF771E',
+        'secondaryOrange': '#FF771E',
         'lightOrange': '#FF9248',
         'darkOrange': '#B34017'
       }
