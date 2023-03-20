@@ -8,7 +8,7 @@ export default function News({news}) {
     <div className='text-white w-screen flex flex-col gap-4 justify-center items-center px-4'>
         <div className='flex flex-col gap-4 border-b-2 border-secondary pb-4'>
             <Link href={news[0].NewsLink}>
-                <Image alt='' src={news[0].Image} width={335} height={188} className='rounded-lg'/>
+                <Image alt='' src={news[0].Image} width={335} height={188} className='rounded-lg mx-auto'/>
             </Link>
             <h1 className='text-white'>{news[0].Title}</h1>
             <span className='flex flex-row justify-between'>
