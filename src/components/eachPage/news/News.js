@@ -29,7 +29,7 @@ export default function News({news}) {
                         <Link href={newsItem.NewsLink} className='w-[64px] h-[64px] hidden sm:inline-block'>
                             <Image alt='' src={newsItem.Image} width={64} height={64} className='rounded-lg'/>
                         </Link>
-                        <h1 className='text-white text-sm w-4/5 sm:text-lg sm:whitespace-nowrap'>{newsItem.Title}</h1>
+                        <h1 className='text-white text-sm w-4/5 sm:text-md sm:whitespace-nowrap'>{newsItem.Title}</h1>
                         <Link href={newsItem.NewsLink} className='w-[64px] h-[64px] sm:hidden'>
                             <Image alt='' src={newsItem.Image} width={64} height={64} className='rounded-lg'/>
                         </Link>
