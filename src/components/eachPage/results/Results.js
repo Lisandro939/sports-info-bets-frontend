@@ -7,7 +7,7 @@ export default function Results({results}) {
     <div className='text-white px-4 flex flex-col gap-4'>
         <h1 className='text-white'>Resultados</h1>
         {
-          results.length <= 1 || results.length === undefined ? <h1 className='h-24 sm:h-12'>¡Ups! No hay partidos en el último tiempo</h1> : <></>
+          results.length === [{}] ? <h1 className='h-24 sm:h-12'>¡Ups! No hay partidos en el último tiempo</h1> : <></>
         }
         <div className='sm:max-w-sm'>
         {results.map((item, index) => {
