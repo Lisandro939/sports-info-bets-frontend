@@ -8,7 +8,7 @@ import Transfers from './transfers/Transfers'
 
 export default function Content({table, news, results, transfers}) {
 
-    const classButton = 'text-white text-xs py-2'
+    const classButton = 'text-white text-xs py-2 sm:text-lg'
 
     const [positionsButton, setPositionsButton] = useState(' border-b-2 border-secondaryOrange')
     const [newsButton, setNewsButton] = useState('')

@@ -28,10 +28,11 @@ export default async function page({params}) {
     <div className='w-screen h-full bg-primary flex flex-col py-6'>
       <span className='flex flex-col gap-4'>
         <div className='flex flex-row items-center gap-2 ml-4'>
-          <Image alt='' src={logo} width={50} height={50} className='border border-secondary rounded-full p-1'/>
+          <Image alt='' src={logo} width={50} height={50} className='border border-secondary rounded-full p-1 sm:hidden'/>
+          <Image alt='' src={logo} width={100} height={100} className='border border-secondary rounded-full p-2 hidden sm:inline-block'/>
           <div className='flex flex-col items-start justifu-around'>
-            <h2 className='text-[10px] text-white'>COMPETICIÓN</h2>
-            <h1 className='text-white text-sm font-bold'>{leagueNameMod}</h1>
+            <h2 className='text-[10px] text-white sm:text-lg'>COMPETICIÓN</h2>
+            <h1 className='text-white text-sm font-bold sm:text-2xl'>{leagueNameMod}</h1>
           </div>
         </div>
         <Content table={table} news={news} results={results} transfers={transfers}/>

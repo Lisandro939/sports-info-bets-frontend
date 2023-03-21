@@ -8,7 +8,7 @@ export default async function GeneralNews() {
 
   return (
     <div className='w-screen h-full bg-primary py-6 px-2 flex flex-col gap-6 items-center'>
-        <h1 className='text-white w-[335px]'>Top News</h1>
+        <h1 className='text-white w-[335px] sm:w-screen sm:text-start sm:px-8 sm:text-xl'>Top News</h1>
         <New news={news}/>
     </div>
   )

@@ -6,7 +6,7 @@ export default function Results({results}) {
   return (
     <div className='text-white px-4 flex flex-col gap-4'>
         <h1 className='text-white'>Resultados</h1>
-        <div>
+        <div className='sm:max-w-xs'>
         {results.map((item, index) => {
           const matchdayNumbers = Object.keys(item);
           const games = [];
