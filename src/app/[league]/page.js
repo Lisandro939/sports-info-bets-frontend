@@ -35,7 +35,7 @@ export default async function page({params}) {
             <h1 className='text-white text-sm font-bold sm:text-2xl'>{leagueNameMod}</h1>
           </div>
         </div>
-        <Content table={table} news={news} results={results} transfers={transfers}/>
+        <Content table={table} news={news} results={results} transfers={transfers} league={leagueName}/>
       </span>
     </div>
   )

@@ -6,7 +6,7 @@ import Positions from './positions/Positions'
 import Results from './results/Results'
 import Transfers from './transfers/Transfers'
 
-export default function Content({table, news, results, transfers}) {
+export default function Content({table, news, results, transfers, league}) {
 
     const classButton = 'text-white text-xs py-2 sm:text-lg'
 
@@ -89,7 +89,7 @@ export default function Content({table, news, results, transfers}) {
           </button>
         </div>
         <div className={positionsDiv}>
-          <Positions table={table}/>
+          <Positions table={table} league={league}/>
         </div>
         <div className={newsDiv}>
           <News news={news} />
