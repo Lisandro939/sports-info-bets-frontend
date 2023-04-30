@@ -8,11 +8,11 @@ export default function Positions({table, league}) {
 
     const classTH = 'px-2 text-xs sm:text-lg'
     const classTD = 'px-2 py-4 text-center sm:text-lg '
-
-    console.log(league)
-
+    const classTDPosition = 'px-2 py-4 text-center sm:text-lg text-center '
+    const classP = 'w-min mx-auto border rounded-full px-4 py-2 '
+ 
     const clasification = clasificationPerPosition(league);
-
+ 
   return (
     <div className='text-white text-xs overflow-x-auto sm:pr-4'>
       <table className='max-w-full sm:w-screen'>
@@ -35,16 +35,16 @@ export default function Positions({table, league}) {
             <tr key={team.name} className='border-b border-secondary'>
               {
                 clasification.champions_league.includes(index + 1) 
-                ? <td className={classTD + 'text-blue-500'}>{index + 1}</td>
+                ? <td className={classTDPosition}><p className={classP + 'border-blue-500'}>{index + 1}</p></td>
                 : clasification.europe_league.includes(index + 1) 
-                ? <td className={classTD + 'text-orange-500'}>{index + 1}</td>
+                ? <td className={classTDPosition}><p className={classP + 'border-orange-500'}>{index + 1}</p></td>
                 : clasification.europe_conference_league.includes(index + 1) 
-                ? <td className={classTD + 'text-green-500'}>{index + 1}</td>
+                ? <td className={classTDPosition}><p className={classP + 'border-green-500'}>{index + 1}</p></td>
                 : clasification.relegation_elimination.includes(index + 1) 
-                ? <td className={classTD + 'text-red-500'}>{index + 1}</td>
+                ? <td className={classTDPosition}><p className={classP + 'border-red-500'}>{index + 1}</p></td>
                 : clasification.relegation.includes(index + 1)
-                ? <td className={classTD + 'text-red-700'}>{index + 1}</td>
-                : <td className={classTD}>{index + 1}</td>
+                ? <td className={classTDPosition}><p className={classP + 'border-red-700'}>{index + 1}</p></td>
+                : <td className={classTDPosition}><p>{index + 1}</p></td>
               }
               <td className='flex flex-row items-center justify-start gap-2 py-4 sm:text-lg'>
                 <Image alt='' src={team.logo} width={31} height={31} className='border border-secondary rounded-full p-1 sm:hidden'/>
