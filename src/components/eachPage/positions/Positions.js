@@ -9,7 +9,7 @@ export default function Positions({table, league}) {
     const classTH = 'px-2 text-xs sm:text-lg'
     const classTD = 'px-2 py-4 text-center sm:text-lg '
     const classTDPosition = 'py-2 text-center sm:text-lg text-center '
-    const classP = 'w-min mx-auto border rounded-full px-4 py-2 '
+    const classP = 'w-8 sm:w-10 h-8 sm:h-10 mx-4 py-1.5 sm:py-1 sm:mx-auto border rounded-full text-center '
  
     const clasification = clasificationPerPosition(league);
  
