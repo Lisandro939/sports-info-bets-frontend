@@ -48,7 +48,7 @@ export default function Positions({table, league}) {
                 ? <td className={classTDPosition}><p className={classP + 'border-red-500'}>{index + 1}</p></td>
                 : clasification.relegation.includes(index + 1)
                 ? <td className={classTDPosition}><p className={classP + 'border-red-700'}>{index + 1}</p></td>
-                : <td className={classTDPosition}><p>{index + 1}</p></td>
+                : <td className={classTDPosition}><p className='w-8 sm:w-10 h-8 sm:h-10 mx-4 py-1.5 sm:py-1 sm:mx-auto text-center'>{index + 1}</p></td>
               }
               <td className='flex flex-row items-center justify-start gap-2 py-4 sm:text-lg'>
                 <Image alt='' src={team.logo} width={31} height={31} className='border border-secondary rounded-full p-1 sm:hidden'/>
@@ -74,8 +74,8 @@ export default function Positions({table, league}) {
       </table>
       {
         league === 'laliga' || league === 'premierleague' || league === 'seriea' || league === 'bundesliga' || league === 'ligue1' 
-        ? <div className='h-full w-full flex flex-col gap-2 px-4 py-8 text-lg text-terciary'>
-        <h1 className='flex flex-row gap-1'>Posiciones {clasification.champions_league.map(
+        ? <div className='h-full w-screen flex flex-col gap-2 px-4 py-8 text-lg text-terciary'>
+        <h1 className='flex flex-row gap-1 whitespace-nowrap'>Posiciones {clasification.champions_league.map(
           (number) => (
             <p key={number}>- {number}</p>
           )
